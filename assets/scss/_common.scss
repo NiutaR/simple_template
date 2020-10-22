@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    background: url(../img/background.jpg);
+    background-color: #3a3a3a;
+    background-position: 50% 0;
+
+    align-items: center;
+}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/optical-glasses.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+
+h2 {
+    margin: 10px 0;
+
+    color: $accent-color;
+
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+p {
+    color: $base-color;
+
+    line-height: 1.75;
+}
+i {
+    color: #424242;
+}
+
+li {
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: $large;
+    padding: 0 $gap;
+
+    flex-grow: 1;
+}
