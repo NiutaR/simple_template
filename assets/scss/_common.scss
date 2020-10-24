@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    background: url(../img/background.jpg);
+    background: url(../img/backgroud.jpg);
     background-color: #3a3a3a;
     background-position: 50% 0;
 
@@ -29,7 +29,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/optical-glasses.jpg);
+    background-image: url(../img/backgroud.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -67,7 +67,7 @@ li {
 
 .wrapper {
     max-width: $large;
-    padding: 0 $gap;
+    padding: 0 $gutter;
 
     flex-grow: 1;
 }

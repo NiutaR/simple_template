@@ -4,6 +4,13 @@
     display: flex;
     justify-content: flex-end;
 
+    @media (min-width: $small + 1) {
+        flex: 1 0 200px;
+    }
+
+    @media (max-width: $small) {
+        flex: 1 0 50px;
+    }
 
     &__list {
         display: flex;
@@ -12,22 +19,37 @@
         padding: 0;
         list-style: none;
         align-items: center;
-    }
 
-    &.active {
-        z-index: 1;
-        visibility: visible;
-        opacity: 1;
+        @media (max-width: $large) {
+            position: absolute;
+            z-index: -999;
+            top: 100%;
+            right: -$gutter;
 
-        .menu__list-item {
-            width: 100%;
-            margin: 0;
-            text-align: center;
+            visibility: hidden;
+            flex-direction: column;
+            width: 100vw;
+            transition: opacity 0.5s;
 
-            a {
+            opacity: 0;
+            background-color: rgba(#000000, 0.8);
+        }
+
+        &.active {
+            z-index: 1;
+            visibility: visible;
+            opacity: 1;
+
+            .menu__list-item {
                 width: 100%;
-                padding: $gap;
-                border-radius: 0;
+                margin: 0;
+                text-align: center;
+
+                a {
+                    width: 100%;
+                    padding: $gutter;
+                    border-radius: 0;
+                }
             }
         }
     }
@@ -38,21 +60,22 @@
 
         a {
             display: block;
-            padding: 12px $gap;
+            padding: 12px $gutter;
+
             text-decoration: none;
             text-transform: uppercase;
+
             color: $light-color;
-            border-radius: $gap;
+            border-radius: $gutter;
         }
 
         &:hover:not(.active) a {
-            background-color: rgba(#142422, 0.2);
+            background-color: rgba(#ffffff, 0.2);
         }
 
         &.active a {
-            background: linear-gradient(to bottom, #4b6f70 0%, #306e70 50%, #25615c 51%, #2f6d67 100%);
+            background: linear-gradient(to bottom, #335a69 0%, #3ea3a7 50%, #325d63 51%, #2ac8dd 100%);
         }
-
     }
 }
 
@@ -60,15 +83,10 @@
     flex-direction: column;
     width: 50px;
     height: 50px;
-
     cursor: pointer;
-
-    background-color: rgba(#1b1717, 0.25);
-
+    background-color: rgba(#000000, 0.25);
     align-items: center;
     justify-content: center;
-
-
     @media (min-width: $large + 1) {
         display: none;
     }
@@ -79,14 +97,11 @@
 
     &-row {
         position: relative;
-
         width: 60%;
         height: 2px;
         margin: 2px 0;
-
         transition: all 0.5s;
-
-        background-color: #99b1b4;
+        background-color: #dbcdcd;
     }
 
     &.active .menu__btn-row {
