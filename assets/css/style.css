@@ -552,6 +552,9 @@ template {
 }
 
 .menu__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
@@ -624,6 +627,8 @@ template {
 
 .main p {
   text-align: justify;
+
+  color: #223355;
 }
 
 .left-sidebar {
@@ -662,9 +667,9 @@ template {
 
 .left-sidebar li span::after {
   position: absolute;
+  top: 0;
   right: 0;
   bottom: -10px;
-  left: 0;
 
   height: 1px;
 
@@ -830,33 +835,6 @@ body {
   background-position: 50% 0;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-
-  background-image: url(../img/backgroud.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 a {
   text-decoration: none;
 }
@@ -876,7 +854,7 @@ h3 {
 }
 
 p {
-  color: #224455;
+  color: #223355;
 
   line-height: 1.75;
 }
@@ -987,18 +965,6 @@ li {
 
 .carousel-control img {
   margin-top: -15px;
-}
-
-.carousel-control.prev {
-  left: 3px;
-}
-
-.carousel-control.next {
-  right: 3px;
-
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
 }
 
 .bottom-sidebar {

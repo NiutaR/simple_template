@@ -6,33 +6,11 @@ html {
     font-family: verdana, arial, sans-serif;
     font-size: 12px;
 }
-
 body {
-    display: flex;
-    flex-direction: column;
-
+    @include position;
     background: url(../img/backgroud.jpg);
     background-color: #3a3a3a;
     background-position: 50% 0;
-
-    align-items: center;
-}
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-family: verdana, arial, sans-serif;
-    font-size: 12px;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    background-image: url(../img/backgroud.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
 }
 a {
     text-decoration: none;
@@ -40,9 +18,7 @@ a {
 
 h2 {
     margin: 10px 0;
-
     color: $accent-color;
-
     font-size: 2rem;
     font-weight: normal;
 }
@@ -53,8 +29,7 @@ h3 {
 }
 
 p {
-    color: $base-color;
-
+    color: $accent-color;
     line-height: 1.75;
 }
 i {
@@ -68,6 +43,5 @@ li {
 .wrapper {
     max-width: $large;
     padding: 0 $gutter;
-
     flex-grow: 1;
 }

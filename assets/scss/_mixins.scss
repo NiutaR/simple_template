@@ -8,3 +8,15 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
+
+@mixin position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin abs-position($t: 0, $r: 0,) {
+    position: absolute;
+    top: $t;
+    right: $r;
+}

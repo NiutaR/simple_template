@@ -1,11 +1,8 @@
 .container {
     display: flex;
-
     margin-bottom: 50px;
     padding: $gutter;
-
     background: rgba(#ffffff, 0.1);
-
     flex-wrap: wrap;
 }
 
@@ -30,5 +27,6 @@
 
     p {
         text-align: justify;
+        color: $accent-color;
     }
 }

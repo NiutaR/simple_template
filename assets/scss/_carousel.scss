@@ -13,9 +13,7 @@
 .carousel-slide {
     position: absolute;
     top: 0;
-
     display: flex;
-
     transition: opacity 0.5s;
 
     opacity: 0;
@@ -32,16 +30,13 @@
     &.active {
         position: relative;
         z-index: 1;
-
         opacity: 1;
     }
 }
 
 .carousel-slide__image {
     display: flex;
-
     padding: $gutter;
-
     align-items: center;
 
     @media (min-width: $large + 1) {
@@ -66,7 +61,6 @@
 .carousel-slide__text {
     @media (min-width: $small + 1) {
         padding: $gutter $gutter*2 $gutter $gutter;
-
         flex-grow: 1;
     }
 
@@ -131,13 +125,4 @@
         margin-top: -$gutter;
     }
 
-    &.prev {
-        left: 3px;
-    }
-
-    &.next {
-        right: 3px;
-
-        transform: scale(-1, 1);
-    }
 }

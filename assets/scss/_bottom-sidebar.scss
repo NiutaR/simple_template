@@ -1,13 +1,9 @@
 .bottom-sidebar {
     position: relative;
-
     display: flex;
     flex: 1 0 100%;
-
     padding: $gutter;
-
     background-color: $light-color;
-
     flex-wrap: wrap;
     order: 4;
 
@@ -25,9 +21,7 @@
 
     p {
         margin: 0;
-
         color: $base-color;
-
         line-height: 1.5em;
     }
 
@@ -38,11 +32,8 @@
 
 .bottom-sidebar__left {
     position: relative;
-
     display: flex;
-
     border: 5px solid #ffffff;
-
     align-items: flex-start;
     @extend %linear-gradient;
 
@@ -54,32 +45,23 @@
         border-right: none;
 
         &::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-
+            @include abs-position;
             height: 100%;
-
             content: "";
-
             border-right: 1px solid darken($light-color, 7%);
         }
     }
 
     @media (max-width: $small) {
         flex: 1 0 100%;
-
         padding: $gutter;
     }
 }
 
 .bottom-sidebar__right {
     position: relative;
-
     display: flex;
-
     border: 5px solid #ffffff;
-
     align-items: flex-start;
     @extend %linear-gradient;
 
